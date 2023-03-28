@@ -1,7 +1,5 @@
 <template>
   <td
-    class="m_-6437950903586173460column"
-    width="100%"
     style="
       font-weight: 400;
       text-align: left;
@@ -15,33 +13,31 @@
     "
   >
     <!-- Header Starts -->
-    <table
-      width="100%"
-      border="0"
-      cellpadding="10"
-      cellspacing="0"
-      role="presentation"
-      style="word-break: break-word"
-    >
+    <table width="100%" border="0" cellpadding="10" cellspacing="0">
       <tbody>
         <tr>
           <td>
-            <div style="font-family: Verdana, sans-serif">
-              <div
-                style="
-                  font-family: Verdana, Geneva, sans-serif;
-                  line-height: 1.2;
-                "
-              >
-                <p style="margin: 0; font-size: 25px; text-align: left">
+            <div>
+              <div style="line-height: 1.2">
+                <p
+                  style="
+                    margin: 0 0 10px 0;
+                    font-size: 25px;
+                    text-align: justify;
+                  "
+                >
                   <span
-                    ><strong>{{ header.heading }}</strong></span
+                    ><strong> {{ header.heading }} &#128075; </strong></span
                   >
                 </p>
-                <p style="margin: 0">
-                  <span>&nbsp;</span>
-                </p>
-                <p style="margin: 0; font-size: 15px; line-height: 21px">
+                <p
+                  style="
+                    margin: 0;
+                    font-size: 15px;
+                    line-height: 21px;
+                    text-align: left;
+                  "
+                >
                   <span>{{ header.description }}</span>
                 </p>
               </div>
@@ -58,37 +54,8 @@
       cellpadding="35"
       cellspacing="0"
       role="presentation"
-    >
-      <tbody>
-        <tr>
-          <td>
-            <div align="center">
-              <table
-                border="0"
-                cellpadding="0"
-                cellspacing="0"
-                role="presentation"
-                width="100%"
-              >
-                <tbody>
-                  <tr>
-                    <td
-                      style="
-                        font-size: 1px;
-                        line-height: 1px;
-                        border-top: 1px solid #efefef;
-                      "
-                    >
-                      <span>&hairsp;</span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      style="padding: 10px; border-top: 3px solid #efefef"
+    ></table>
     <!-- Gap Ends -->
     <div v-for="(product, i) in products" :key="i">
       <table
@@ -97,7 +64,7 @@
         cellpadding="15"
         cellspacing="0"
         role="presentation"
-        style="word-break: break-word"
+        style="padding-top: 20px"
       >
         <tbody>
           <tr>
@@ -110,28 +77,26 @@
                     line-height: 1.2;
                   "
                 >
-                  <p style="margin: 0; text-align: center; font-size: 19px">
+                  <p
+                    style="
+                      margin: 0;
+                      margin-bottom: 6px;
+                      text-align: center;
+                      font-size: 19px;
+                      text-transform: uppercase;
+                    "
+                  >
                     <strong>{{ product.title }}</strong>
                   </p>
-                  <p style="margin: 0">&nbsp;</p>
                   <p
-                    style="margin: 0; font-size: 15px; line-height: 21px"
+                    style="
+                      margin: 0;
+                      text-align: justify;
+                      font-size: 15px;
+                      line-height: 21px;
+                    "
                     v-html="product.description"
                   ></p>
-                  <p style="margin: 0">&nbsp;</p>
-                  <p style="margin: 0; font-size: 15px; line-height: 21px">
-                    Try it
-                    <strong
-                      ><a
-                        :href="product.link"
-                        style="text-decoration: underline; color: #343446"
-                        rel="noopener"
-                        target="_blank"
-                        :data-saferedirecturl="product.link"
-                        >here!</a
-                      ></strong
-                    >
-                  </p>
                 </div>
               </div>
             </td>
@@ -139,12 +104,12 @@
         </tbody>
       </table>
       <table
-        class="m_-6437950903586173460image_block"
         width="100%"
         border="0"
         cellpadding="5"
         cellspacing="0"
         role="presentation"
+        style="padding-bottom: 40px; border-bottom: 4px solid #efefef"
         v-if="product.image"
       >
         <tbody>
@@ -164,43 +129,27 @@
                     width="490"
                 /></a>
               </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <table
-        width="100%"
-        border="0"
-        cellpadding="35"
-        cellspacing="0"
-        role="presentation"
-      >
-        <tbody>
-          <tr>
-            <td>
-              <div align="center">
-                <table
-                  border="0"
-                  cellpadding="0"
-                  cellspacing="0"
-                  role="presentation"
-                  width="100%"
+              <p
+                style="
+                  margin: 0;
+                  margin-top: 12px;
+                  font-size: 15px;
+                  text-align: center;
+                  line-height: 21px;
+                "
+              >
+                Try
+                <strong
+                  ><a
+                    :href="product.link"
+                    style="text-decoration: underline; color: #343446"
+                    rel="noopener"
+                    target="_blank"
+                    :data-saferedirecturl="product.link"
+                    >{{ product.title }} here!</a
+                  ></strong
                 >
-                  <tbody>
-                    <tr>
-                      <td
-                        style="
-                          font-size: 1px;
-                          line-height: 1px;
-                          border-top: 1px solid #efefef;
-                        "
-                      >
-                        <span>&hairsp;</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              </p>
             </td>
           </tr>
         </tbody>
@@ -229,7 +178,6 @@
                 <p style="margin: 0">
                   <span style="font-size: 14px">{{ footer.heading }}</span>
                 </p>
-                <p style="margin: 0">&nbsp;</p>
                 <p style="margin: 0">
                   <span style="font-size: 14px" v-html="footer.description">
                   </span>
@@ -250,12 +198,12 @@ export default {
   data() {
     return {
       header: {
-        heading: "Dear name",
-        description: `Welcome to the latest edition of our AI newsletter! As always, we're excited to share with you the latest product launches and research developments happening in the AI space.`,
+        heading: `Hey <?= name ?>`,
+        description: `Welcome to the first ever edition of our AI newsletter! As always, we're excited to share with you the latest product launches and research developments happening in the AI space. So here we go..`,
       },
       products: [
         {
-          title: "Adobe Firefly 🪰",
+          title: "Adobe Firefly",
           description: `A family of generative AI models that includes content-aware image generation capabilities.
           This powerful feature allows Firefly to analyze an image and generate variations that fit the context of the original image.
           Imagine how much time and effort you could save by using this tool instead of manually editing images!
