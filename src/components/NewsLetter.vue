@@ -17,30 +17,42 @@
       <tbody>
         <tr>
           <td>
-            <div>
-              <div style="line-height: 1.2">
-                <p
+            <div style="line-height: 1.2">
+              <div
+                style="
+                  display: flex;
+                  align-items: baseline;
+                  gap: 20px;
+                  padding-bottom: 10px;
+                  margin: 0;
+                "
+              >
+                <span
                   style="
-                    margin: 0 0 10px 0;
-                    font-size: 25px;
                     text-align: justify;
-                  "
-                >
-                  <span
-                    ><strong> {{ header.heading }} &#128075; </strong></span
-                  >
-                </p>
-                <p
-                  style="
                     margin: 0;
-                    font-size: 15px;
-                    line-height: 21px;
-                    text-align: left;
+                    font-size: 1.4rem;
+                    font-weight: 900;
                   "
                 >
-                  <span>{{ header.description }}</span>
-                </p>
+                  <span style="">{{ header.heading }}</span>
+                </span>
+                <img
+                  style="width: 2rem"
+                  src="https://em-content.zobj.net/source/microsoft-teams/337/waving-hand_1f44b.png"
+                  loading="lazy"
+                />
               </div>
+              <span
+                style="
+                  margin: 0;
+                  line-height: 24px;
+                  text-align: left;
+                  font-size: 1.1rem;
+                "
+              >
+                {{ header.description }}
+              </span>
             </div>
           </td>
         </tr>
@@ -48,14 +60,10 @@
     </table>
     <!-- Header Ends -->
     <!-- Gap Starts -->
-    <table
+    <div
       width="100%"
-      border="0"
-      cellpadding="35"
-      cellspacing="0"
-      role="presentation"
-      style="padding: 10px; border-top: 3px solid #efefef"
-    ></table>
+      style="margin-top: 10px; padding: 10px; border-top: 3px solid #efefef"
+    ></div>
     <!-- Gap Ends -->
     <div v-for="(product, i) in products" :key="i">
       <table
@@ -69,35 +77,34 @@
         <tbody>
           <tr>
             <td>
-              <div style="font-family: Verdana, sans-serif">
-                <div
+              <div
+                style="
+                  font-family: Verdana, Geneva, sans-serif;
+                  line-height: 1.2;
+                "
+              >
+                <p
                   style="
-                    font-size: 12px;
-                    font-family: Verdana, Geneva, sans-serif;
-                    line-height: 1.2;
+                    margin: 0;
+                    margin-bottom: 6px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    font-size: 1.5rem;
                   "
                 >
-                  <p
-                    style="
-                      margin: 0;
-                      margin-bottom: 6px;
-                      text-align: center;
-                      font-size: 19px;
-                      text-transform: uppercase;
-                    "
-                  >
-                    <strong>{{ product.title }}</strong>
-                  </p>
-                  <p
-                    style="
-                      margin: 0;
-                      text-align: justify;
-                      font-size: 15px;
-                      line-height: 21px;
-                    "
-                    v-html="product.description"
-                  ></p>
-                </div>
+                  {{ product.title }}
+                </p>
+                <p
+                  style="
+                    margin: 0;
+                    text-align: justify;
+                    margin-top: 6px;
+                    font-size: 16px;
+                    line-height: 24px;
+                  "
+                  v-html="product.description"
+                ></p>
               </div>
             </td>
           </tr>
@@ -119,6 +126,7 @@
                 <a style="outline: none" target="_blank"
                   ><img
                     :src="product.image"
+                    :alt="product.title"
                     style="
                       display: block;
                       height: auto;
@@ -133,21 +141,18 @@
                 style="
                   margin: 0;
                   margin-top: 12px;
-                  font-size: 15px;
                   text-align: center;
                   line-height: 21px;
                 "
               >
                 Try
-                <strong
-                  ><a
-                    :href="product.link"
-                    style="text-decoration: underline; color: #343446"
-                    rel="noopener"
-                    target="_blank"
-                    :data-saferedirecturl="product.link"
-                    >{{ product.title }} here!</a
-                  ></strong
+                <a
+                  :href="product.link"
+                  style="text-decoration: underline; font-weight: 900"
+                  rel="noopener"
+                  target="_blank"
+                  :data-saferedirecturl="product.link"
+                  >{{ product.title }} here!</a
                 >
               </p>
             </td>
@@ -172,15 +177,14 @@
               <div
                 style="
                   font-family: Verdana, Geneva, sans-serif;
-                  line-height: 20px;
+                  line-height: 21px;
                 "
               >
                 <p style="margin: 0">
-                  <span style="font-size: 14px">{{ footer.heading }}</span>
+                  <span style="">{{ footer.heading }}</span>
                 </p>
                 <p style="margin: 0">
-                  <span style="font-size: 14px" v-html="footer.description">
-                  </span>
+                  <span style="" v-html="footer.description"> </span>
                 </p>
               </div>
             </div>
@@ -240,7 +244,7 @@ export default {
           It currently works as a browser extension.<br /><br />
           The exciting thing here is that you just have write a manifest.json file, and describe what you want your extension to do in a natural language, and leave the rest to ChatGPT, it will find ways to connect with external API's, auth services, data scraping and everything else, it will handle by itself.
           <br /><br />
-          <span style="font-size: 15px;"> It's currently behind a waitlist, <br /> <b> Meanwhile you can access these free ChatGPT Browser extensions, that you can use today to improve your workflow with ChatGPT.
+          <span style=""> It's currently behind a waitlist, <br /> <b> Meanwhile you can access these free ChatGPT Browser extensions, that you can use today to improve your workflow with ChatGPT.
           <br />
           <a target="_blank" href="https://chrome.google.com/webstore/detail/chatonai-unlock-the-power/feeonheemodpkdckaljcjogdncpiiban/related">Chatonai</a>
           <br />
