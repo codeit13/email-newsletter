@@ -50,8 +50,8 @@
                   text-align: left;
                   font-size: 1.1rem;
                 "
+                v-html="header.description"
               >
-                {{ header.description }}
               </span>
             </div>
           </td>
@@ -172,6 +172,78 @@
     >
       <tbody>
         <tr>
+          <div style="text-align: center">
+            <form
+              action="https://sleebit.com/contact"
+              target="_blank"
+              style="
+                display: inline-block;
+                padding: 10px;
+                border-radius: 5px;
+                font-family: Arial, sans-serif;
+                width: 100%;
+              "
+            >
+              <h3 style="margin-top: 0; margin-bottom: 10px; width: 100%">
+                How was your experience?
+              </h3>
+              <input type="hidden" name="name" value="<?= name ?>" />
+              <input type="hidden" name="email" value="<?= email ?>" />
+              <div>
+                <select
+                  name="query"
+                  style="
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    font-size: 16px;
+                    border: none;
+                    background: #f2f2f2;
+                    width: 100%;
+                    outline: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                  "
+                >
+                  <option value="Loved it">Loved it</option>
+                  <option value="Meh..">Meh</option>
+                  <option value="Hate">
+                    Hate you, hate this = ruin my week
+                  </option>
+                </select>
+                <span
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    pointer-events: none;
+                  "
+                >
+                  <svg
+                    width="12"
+                    height="8"
+                    viewBox="0 0 12 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1L6 6L11 1"
+                      stroke="#333333"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <br />
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </tr>
+        <tr>
           <td>
             <div style="font-family: Verdana, sans-serif">
               <div
@@ -203,63 +275,56 @@ export default {
     return {
       header: {
         heading: `Hey <?= name ?>`,
-        description: `Welcome to the first ever edition of our AI newsletter! As always, we're excited to share with you the latest product launches and research developments happening in the AI space. So here we go..`,
+        description: `Welcome to the second edition of our AI newsletter! As always, we're excited to share with you the latest product launches and research developments happening in the AI space.
+        <br /><br />
+        Also, you can follow me on <a target='_blank' href='https://twitter.com/thesleebit'>twitter</a> for your daily dose of AI updates and insights. Let's stay in the loop and have some fun exploring the exciting world of artificial intelligence together!
+        <br /><br />
+        So here we go...`,
       },
       products: [
         {
-          title: "Adobe Firefly",
-          description: `A family of generative AI models that includes content-aware image generation capabilities.
-          This powerful feature allows Firefly to analyze an image and generate variations that fit the context of the original image.
-          Imagine how much time and effort you could save by using this tool instead of manually editing images!
-          Plus, it opens up new creative possibilities by generating variations that you might not have thought of or that would have been too difficult to create manually. `,
+          title: "Gamma",
+          description: `This new tool uses AI to help you create beautiful presentations/ websites quickly and easily. Just start writing and the AI will help you with an outline and first draft. You can chat with the AI to get design suggestions and formatting help. Plus, you can highlight any text for rephrasing or visualizing help. It's like having an AI design partner!`,
           image:
-            "https://blog.adobe.com/en/publish/2023/03/21/media_17a0c7e1c188d83c0793b9807e1b027718113fb7b.png?width=2000&format=webply&optimize=medium",
-          link: "https://www.adobe.com/sensei/generative-ai/firefly.html",
+            "https://ph-files.imgix.net/b02d1e3e-a9b2-4c28-bc84-f23d96950860.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&fit=max&dpr=1",
+          link: "https://gamma.app/signup?r=ej9wwm64jqssu3f",
         },
         {
-          title: "Google Bard",
-          description: `Google's latest creation, Bard, is not your average chatbot. This powerful generative and conversational AI tool, akin to ChatGPT and Bing Chat, is designed to take on creative tasks, explain complex topics, and distills information from various sources on the internet. With Bard, you can even ask nuanced questions like finding recipes tailored to your specific fridge ingredients. And unlike Google Search, Bard can condense information from multiple web pages into just a few paragraphs, which could potentially appear at the top of search result pages. Currently, users need to visit a dedicated website to access Bard, but the possibilities for this cutting-edge technology are endless. So why not give it a try and see how it can change the way you search for information online?
-              It's not supported yet for <b>India</b>.
+          title: "Nastia AI",
+          description: `Nastia AI is a chatbot that lets you create a unique companion and roleplay with it. You can generate pictures of your companion and chat about anything with it. It's unfiltered, so you can share any type of content, but remember it's still an AI, not a human.
           <br /><br />
-          Make sure you use <b>US VPN</b> in order to use Bard. <a target="_blank" href="https://play.google.com/store/apps/details?id=com.hoxxvpn.main&hl=en&gl=US">Hoxx VPN</a> for Android`,
+          Nastia AI is a fun and unique way to interact with AI technology and explore your creativity.`,
           image:
-            "https://www.howtogeek.com/wp-content/uploads/2023/03/Google-Bard.png?height=200p&trim=2,2,2,2&crop=16:9",
-          link: "https://bard.google.com",
+            "https://www.nastia.ai/images/c7846abd-f1f1-4796-97ef-4c051851d65b-red.webp",
+          link: "https://nastia.ai",
         },
         {
-          title: "Github Copilot X",
-          description: ` GitHub Copilot X is an AI-powered coding assistant that understands your code and provides personalized help when you need it. It offers context-aware conversations that can help you solve problems or explain a piece of code. With Copilot X, you can even get help fixing errors, and it will generate unit tests to keep you moving forward.
+          title: "Auto GPT",
+          description: ` Auto-GPT is an open-source app that uses the powerful GPT-4 language model to develop and manage businesses autonomously, which is pretty wild! It can work towards an end goal and even use ChatGPT and OpenAI's Plugin Protocol to get things done. But be careful not to leave it running for too long, or it might just keep giving OpenAI money!.
           <br /><br />
-          But Copilot X isn't just limited to coding assistance. It also provides tailored documentation that can save you time and effort. By offering personalized answers that are grounded in maintainer-written documentation, with inline citations, Copilot X streamlines your learning process. No more endless searching for answers. Just load the content, ask your question, and start profiting from the results. With Copilot X, you'll be able to work smarter, not harder
+          In addition to managing businesses, Auto-GPT can also be used to create revenue-generating businesses in autonomous mode, making it a valuable tool for entrepreneurs and developers.
           <br /><br />
-          It's a paid product, but in a meantime, you can use a <b>free</b> VS Code extension, <a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=Codeium.codeium">Codium AI</a> , which has autosuggest features <b>based on your specific codebase, and code writting styles</b>, available for JS, TS, Java, GO and Python languages`,
+          Check out this demo here in a video in this <a target="_blank" href="https://twitter.com/1littlecoder/status/1642815168919875585?s=46&t=PJXwnVvHZ_WMVJM_18DC_Q">tweet</a>`,
 
-          image:
-            "https://news-pctr.c.yimg.jp/uUzvQ3lML_bkIqyakc1vFhNrRI0RUQxg5aFkrX0xDg1_T0wXrbEJjtNGtrf1o9y3TC5kxXrsJm3ey0IVCyWsM9f_Zj4AUehnpfP5SGidwNQM3jL4hXa-btnabsl36UC1mwimmdA22pparLut_S-MQFsH24cY1abQY75EfjLcYgSYg5b0NTtHLhlvwp2oF29Bg8QE3qX5myz0gHDfSRquQQ==",
-          link: "https://github.com/features/preview/copilot-x",
+          image: "https://i.ytimg.com/vi/bnnWPrUxSdA/maxresdefault.jpg",
+          link: "https://github.com/Torantulino/Auto-GPT",
         },
         {
-          title: "Chat GPT 4 Plugins",
-          description: `It's like a new playstore in AI space. OpenAI is ready to take on over full Google first with ChatGPT, and now with the introduction of plugins.
-          It currently works as a browser extension.<br /><br />
-          The exciting thing here is that you just have write a manifest.json file, and describe what you want your extension to do in a natural language, and leave the rest to ChatGPT, it will find ways to connect with external API's, auth services, data scraping and everything else, it will handle by itself.
+          title: "Code Wand",
+          description: `Jarvis is powered by a service called CodeWand, which allows developers to interact with their code using natural language commands. With CodeWand, developers can create custom workflows and integrations to streamline their coding process and make it more intuitive. Jarvis takes this to the next level by using the power of GPT-4 to understand and execute voice commands, making coding even more accessible and efficient.
           <br /><br />
-          <span style=""> It's currently behind a waitlist, <br /> <b> Meanwhile you can access these free ChatGPT Browser extensions, that you can use today to improve your workflow with ChatGPT.
-          <br />
-          <a target="_blank" href="https://chrome.google.com/webstore/detail/chatonai-unlock-the-power/feeonheemodpkdckaljcjogdncpiiban/related">Chatonai</a>
-          <br />
-          <a target="_blank" href="https://chrome.google.com/webstore/detail/enhanced-chatgpt/mcbhhiafbiafmggccdcpgfldcaeipopg/">Enhanced ChatGPT</a> </b>
-          <br/>Do give these tools a try, Results are pretty amazing.</span>`,
+          <span style=""> It's currently behind a <a target="_blank" href="https://www.codewand.co/">waitlist</a>, so if you're interested in trying it out, it's a good idea to sign up as soon as possible to get early access. With the combination of CodeWand and Jarvis, developers can unlock a whole new level of productivity and ease in their coding workflows.`,
           image:
-            "https://www.gizchina.com/wp-content/uploads/images/2023/03/Open-AI-ChatGPT-Plugins.jpg",
-          link: "https://openai.com/blog/chatgpt-plugins",
+            "https://pbs.twimg.com/profile_images/1590940245209616385/Vjx1ngxv_400x400.jpg",
+          link: "https://www.codewand.co",
         },
         {
-          title: "Free ChatGPT Prompts",
-          description: `Here is a free prompts guide where there are many free prompts, that you can use and tell ChatGPT to be an expert at a specific task, and then follow up your question related to the task, in subsequent prompts, the results are pretty amazing.
-          <br /><br /> `,
-          image: "https://sleebit.com/images/free-chatgpt-prompts.jpg",
-          link: "https://prompts.chat",
+          title: "DID AI",
+          description: `This is a new cool tool that lets you create talking head videos on your own face, from text or audio, making your content more engaging and human! You can generate virtual presenters in a snap, and personalize videos in over 100 languages - without any technical knowledge! Best of all, it's super cost-effective, making it easy to create awesome videos at scale. Say goodbye to the hassle of video production and hello to awesome, personalized content!.
+          <br /><br /> They also have a product, in which you can interact with ChatGPT via your voice, and it will also respond back with it's own voice and a talking avatar. Can see the demo <a target='_blank' href='https://twitter.com/D_ID_/status/1633124028486483971'>here</a>`,
+          image:
+            "https://pbs.twimg.com/profile_images/1035955123162435585/qNxR7S9q_400x400.jpg",
+          link: "https://studio.d-id.com",
         },
       ],
       footer: {
