@@ -35,7 +35,7 @@
                     font-weight: 900;
                   "
                 >
-                  <span style="">{{ header.heading }}</span>
+                  <span style="" v-html="header.heading"></span>
                 </span>
                 <img
                   style="width: 2rem"
@@ -185,15 +185,16 @@
               "
             >
               <h3 style="margin-top: 0; margin-bottom: 10px; width: 100%">
-                How was your experience?
+                So, <span v-html="`<?= name ?>`"></span> How likely are you to
+                recommend our newsletter to a friend?
               </h3>
               <input type="hidden" name="name" value="<?= name ?>" />
               <input type="hidden" name="email" value="<?= email ?>" />
               <div>
                 <select
                   name="query"
+                  required
                   style="
-                    margin-bottom: 10px;
                     padding: 10px;
                     font-size: 16px;
                     border: none;
@@ -205,10 +206,11 @@
                     appearance: none;
                   "
                 >
-                  <option value="Loved it">Loved it</option>
-                  <option value="Meh..">Meh</option>
-                  <option value="Hate">
-                    Hate you, hate this = ruin my week
+                  <option selected disabled>Select</option>
+                  <option value="Heck yes!">Heck yes!</option>
+                  <option value="Maybe">Maybe</option>
+                  <option value="Only if you bribe me with more cool content">
+                    Only if you bribe me with more cool content
                   </option>
                 </select>
                 <span
@@ -244,6 +246,29 @@
           </div>
         </tr>
         <tr>
+          <div style="text-align: center">
+            <div
+              style="
+                display: inline-block;
+                padding: 10px;
+                border-radius: 5px;
+                font-family: Arial, sans-serif;
+                width: 100%;
+              "
+            >
+              <h4 style="margin-top: 40px; margin-bottom: 10px; width: 100%">
+                Read how AI Models Like ChatGPT Produce Human-like Text
+                Responses?
+                <a
+                  target="_blank"
+                  href="https://medium.com/@sleebit/how-ai-models-like-chatgpt-produce-human-like-text-responses-5bb3e8696b8e"
+                  >here</a
+                >
+              </h4>
+            </div>
+          </div>
+        </tr>
+        <tr>
           <td>
             <div style="font-family: Verdana, sans-serif">
               <div
@@ -275,7 +300,7 @@ export default {
     return {
       header: {
         heading: `Hey <?= name ?>`,
-        description: `Welcome to the second edition of our AI newsletter! As always, we're excited to share with you the latest product launches and research developments happening in the AI space.
+        description: `Welcome to the third edition of our AI newsletter! As always, we're excited to share with you the latest product launches and research developments happening in the AI space.
         <br /><br />
         Also, you can follow me on <a target='_blank' href='https://twitter.com/thesleebit'>twitter</a> for your daily dose of AI updates and insights. Let's stay in the loop and have some fun exploring the exciting world of artificial intelligence together!
         <br /><br />
@@ -283,48 +308,36 @@ export default {
       },
       products: [
         {
-          title: "Gamma",
-          description: `This new tool uses AI to help you create beautiful presentations/ websites quickly and easily. Just start writing and the AI will help you with an outline and first draft. You can chat with the AI to get design suggestions and formatting help. Plus, you can highlight any text for rephrasing or visualizing help. It's like having an AI design partner!`,
-          image:
-            "https://ph-files.imgix.net/b02d1e3e-a9b2-4c28-bc84-f23d96950860.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&fit=max&dpr=1",
-          link: "https://gamma.app/signup?r=ej9wwm64jqssu3f",
+          title: "Landing AI",
+          description: `Landing.AI is a powerful AI tool that allows you to create stunning websites in a matter of seconds. With its generative AI technology, Landing.AI can help you explain your product, showcase your branding, and create a unique landing page that's sure to grab your audience's attention. Whether you're a seasoned marketer or a novice entrepreneur, Landing.AI makes it easy to create a beautiful website that's tailored to your needs – all without any technical expertise or design skills required!`,
+          image: "https://omonterm.sirv.com/Images/landing-ai.png",
+          link: "https://landing-ai.com",
         },
         {
-          title: "Nastia AI",
-          description: `Nastia AI is a chatbot that lets you create a unique companion and roleplay with it. You can generate pictures of your companion and chat about anything with it. It's unfiltered, so you can share any type of content, but remember it's still an AI, not a human.
-          <br /><br />
-          Nastia AI is a fun and unique way to interact with AI technology and explore your creativity.`,
-          image:
-            "https://www.nastia.ai/images/c7846abd-f1f1-4796-97ef-4c051851d65b-red.webp",
-          link: "https://nastia.ai",
+          title: "Copilot 4 Dating",
+          description: `Copilot4dating is an innovative AI-powered tool designed to help you master the art of flirting and spark connections with your potential matches. With Copilot4dating, you can get real-time suggestions for engaging conversation topics, icebreakers, and responses while chatting with your matches or contacts. Additionally, the tool offers character analysis of your friends or matches to help you understand their personality and conversation style, so you can uncover the secrets to creating a strong connection.`,
+          image: "https://omonterm.sirv.com/Images/copilot4dating.webp",
+          link: "https://copilot4dating.com",
         },
         {
-          title: "Auto GPT",
-          description: ` Auto-GPT is an open-source app that uses the powerful GPT-4 language model to develop and manage businesses autonomously, which is pretty wild! It can work towards an end goal and even use ChatGPT and OpenAI's Plugin Protocol to get things done. But be careful not to leave it running for too long, or it might just keep giving OpenAI money!.
-          <br /><br />
-          In addition to managing businesses, Auto-GPT can also be used to create revenue-generating businesses in autonomous mode, making it a valuable tool for entrepreneurs and developers.
-          <br /><br />
-          Check out this demo here in a video in this <a target="_blank" href="https://twitter.com/1littlecoder/status/1642815168919875585?s=46&t=PJXwnVvHZ_WMVJM_18DC_Q">tweet</a>`,
+          title: "Cohesive AI",
+          description: `Introducing Cohesive AI - the most powerful AI editor to help you create magical content effortlessly. With an intuitive interface and real-time suggestions, Cohesive lets you refine, edit, and publish seamlessly. It doesn't matter what you're creating - our 100+ templates cater to every kind of content, from SEO blogs to TikTok videos, song lyrics to wedding vows. And the best part? Cohesive provides endless inspiration, generating new ideas as you write in the editor. With Cohesive, you can craft every word to perfection and bring your ideas to life.`,
 
-          image: "https://i.ytimg.com/vi/bnnWPrUxSdA/maxresdefault.jpg",
-          link: "https://github.com/Torantulino/Auto-GPT",
+          image: "https://omonterm.sirv.com/Images/cohesive-ai.avif",
+          link: "https://cohesive.so",
         },
         {
-          title: "Code Wand",
-          description: `Jarvis is powered by a service called CodeWand, which allows developers to interact with their code using natural language commands. With CodeWand, developers can create custom workflows and integrations to streamline their coding process and make it more intuitive. Jarvis takes this to the next level by using the power of GPT-4 to understand and execute voice commands, making coding even more accessible and efficient.
-          <br /><br />
-          <span style=""> It's currently behind a <a target="_blank" href="https://www.codewand.co/">waitlist</a>, so if you're interested in trying it out, it's a good idea to sign up as soon as possible to get early access. With the combination of CodeWand and Jarvis, developers can unlock a whole new level of productivity and ease in their coding workflows.`,
-          image:
-            "https://pbs.twimg.com/profile_images/1590940245209616385/Vjx1ngxv_400x400.jpg",
-          link: "https://www.codewand.co",
+          title: "Trickle AI",
+          description: `Trickle AI is a versatile platform that provides various prompts to help generate creative ideas for writing and other content creation needs. With just a few clicks, you can select a prompt or ask the AI for suggestions to help you get started. The platform is designed to be collaborative, so you can invite others to join in the brainstorming process at any time. Additionally, you can customize the prompts to suit your specific requirements by editing them directly. Whether you are a content creator or a writer looking for inspiration, Trickle AI offers a range of tools to help you unleash your creativity.`,
+          image: "https://omonterm.sirv.com/Images/trickle-ai.png",
+          link: "https://app.trickle.so/share/1101516451535126531/channel/1102100495012462598?v=1102100529372626981",
         },
         {
-          title: "DID AI",
-          description: `This is a new cool tool that lets you create talking head videos on your own face, from text or audio, making your content more engaging and human! You can generate virtual presenters in a snap, and personalize videos in over 100 languages - without any technical knowledge! Best of all, it's super cost-effective, making it easy to create awesome videos at scale. Say goodbye to the hassle of video production and hello to awesome, personalized content!.
-          <br /><br /> They also have a product, in which you can interact with ChatGPT via your voice, and it will also respond back with it's own voice and a talking avatar. Can see the demo <a target='_blank' href='https://twitter.com/D_ID_/status/1633124028486483971'>here</a>`,
+          title: "Agent GPT",
+          description: `AgentGPT, a revolutionary platform that lets you create and deploy your very own custom AI agents! With AgentGPT, you have the power to name your AI and set it on any mission you desire. Your AI will strategize, execute tasks, and learn from the results, all while working towards achieving your chosen goal. It's like having a personal AI assistant at your fingertips, ready to take on any challenge you can imagine. With AgentGPT, the possibilities are endless.`,
           image:
-            "https://pbs.twimg.com/profile_images/1035955123162435585/qNxR7S9q_400x400.jpg",
-          link: "https://studio.d-id.com",
+            "https://raw.githubusercontent.com/reworkd/AgentGPT/main/public/banner.png?token=GHSAT0AAAAAAB7JND3U3VGGF3UYYHGYO4RAZBSDJAQ",
+          link: "https://agentgpt.reworkd.ai",
         },
       ],
       footer: {

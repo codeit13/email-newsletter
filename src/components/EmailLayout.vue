@@ -47,7 +47,7 @@
                         </tbody>
                         <tr>
                           <img
-                            src="https://sleebit.com/api/get-logo/1/<?= email ?>"
+                            src="https://sleebit.com/api/get-logo/3/<?= email ?>"
                             alt="Until next time"
                             width="10"
                           />
