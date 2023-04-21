@@ -185,8 +185,9 @@
               "
             >
               <h3 style="margin-top: 0; margin-bottom: 10px; width: 100%">
-                So, <span v-html="`<?= name ?>`"></span> How likely are you to
-                recommend our newsletter to a friend?
+                So, <span v-html="`<?= name ?>`"></span> If you could have an
+                AI-powered personal assistant for a day, what would you have
+                them do for you?
               </h3>
               <input type="hidden" name="name" value="<?= name ?>" />
               <input type="hidden" name="email" value="<?= email ?>" />
@@ -206,11 +207,15 @@
                     appearance: none;
                   "
                 >
-                  <option selected disabled>Select</option>
-                  <option value="Heck yes!">Heck yes!</option>
-                  <option value="Maybe">Maybe</option>
-                  <option value="Only if you bribe me with more cool content">
-                    Only if you bribe me with more cool content
+                  <option disabled>Select</option>
+                  <option selected value="Cook all my meals - AI Chef">
+                    Cook all my meals - AI Chef
+                  </option>
+                  <option value="Run all my errands - AI personal assistant">
+                    Run all my errands - AI personal assistant
+                  </option>
+                  <option value="Others - please specify">
+                    Others - please specify
                   </option>
                 </select>
                 <span
@@ -300,44 +305,46 @@ export default {
     return {
       header: {
         heading: `Hey <?= name ?>`,
-        description: `Welcome to the third edition of our AI newsletter! As always, we're excited to share with you the latest product launches and research developments happening in the AI space.
+        description: `Welcome to our AI newsletter, we'll keep you up-to-date on all the latest artificial intelligence developments, without any of the boring stuff.
         <br /><br />
-        Also, you can follow me on <a target='_blank' href='https://twitter.com/thesleebit'>twitter</a> for your daily dose of AI updates and insights. Let's stay in the loop and have some fun exploring the exciting world of artificial intelligence together!
-        <br /><br />
-        So here we go...`,
+        Plus, follow us on <a target='_blank' href='https://twitter.com/thesleebit'>twitter</a> for your daily dose of AI jokes and insights. Let's explore the exciting world of AI together!
+        <br /><br />`,
       },
       products: [
         {
-          title: "Landing AI",
-          description: `Landing.AI is a powerful AI tool that allows you to create stunning websites in a matter of seconds. With its generative AI technology, Landing.AI can help you explain your product, showcase your branding, and create a unique landing page that's sure to grab your audience's attention. Whether you're a seasoned marketer or a novice entrepreneur, Landing.AI makes it easy to create a beautiful website that's tailored to your needs – all without any technical expertise or design skills required!`,
-          image: "https://omonterm.sirv.com/Images/landing-ai.png",
-          link: "https://landing-ai.com",
-        },
-        {
-          title: "Copilot 4 Dating",
-          description: `Copilot4dating is an innovative AI-powered tool designed to help you master the art of flirting and spark connections with your potential matches. With Copilot4dating, you can get real-time suggestions for engaging conversation topics, icebreakers, and responses while chatting with your matches or contacts. Additionally, the tool offers character analysis of your friends or matches to help you understand their personality and conversation style, so you can uncover the secrets to creating a strong connection.`,
-          image: "https://omonterm.sirv.com/Images/copilot4dating.webp",
-          link: "https://copilot4dating.com",
-        },
-        {
-          title: "Cohesive AI",
-          description: `Introducing Cohesive AI - the most powerful AI editor to help you create magical content effortlessly. With an intuitive interface and real-time suggestions, Cohesive lets you refine, edit, and publish seamlessly. It doesn't matter what you're creating - our 100+ templates cater to every kind of content, from SEO blogs to TikTok videos, song lyrics to wedding vows. And the best part? Cohesive provides endless inspiration, generating new ideas as you write in the editor. With Cohesive, you can craft every word to perfection and bring your ideas to life.`,
-
-          image: "https://omonterm.sirv.com/Images/cohesive-ai.avif",
-          link: "https://cohesive.so",
-        },
-        {
-          title: "Trickle AI",
-          description: `Trickle AI is a versatile platform that provides various prompts to help generate creative ideas for writing and other content creation needs. With just a few clicks, you can select a prompt or ask the AI for suggestions to help you get started. The platform is designed to be collaborative, so you can invite others to join in the brainstorming process at any time. Additionally, you can customize the prompts to suit your specific requirements by editing them directly. Whether you are a content creator or a writer looking for inspiration, Trickle AI offers a range of tools to help you unleash your creativity.`,
-          image: "https://omonterm.sirv.com/Images/trickle-ai.png",
-          link: "https://app.trickle.so/share/1101516451535126531/channel/1102100495012462598?v=1102100529372626981",
-        },
-        {
-          title: "Agent GPT",
-          description: `AgentGPT, a revolutionary platform that lets you create and deploy your very own custom AI agents! With AgentGPT, you have the power to name your AI and set it on any mission you desire. Your AI will strategize, execute tasks, and learn from the results, all while working towards achieving your chosen goal. It's like having a personal AI assistant at your fingertips, ready to take on any challenge you can imagine. With AgentGPT, the possibilities are endless.`,
+          title: "Chat PDF",
+          description: `Introducing ChatPDF, the revolutionary way to communicate with any PDF document - and it's completely free and requires no sign-in! With ChatPDF, you can converse with books, research papers, manuals, legal contracts, and any other PDF you may have. It's a game-changing technology that's taking the world by storm, and with ChatGPT paving the way, the possibilities are endless!`,
           image:
-            "https://raw.githubusercontent.com/reworkd/AgentGPT/main/public/banner.png?token=GHSAT0AAAAAAB7JND3U3VGGF3UYYHGYO4RAZBSDJAQ",
-          link: "https://agentgpt.reworkd.ai",
+            "https://ph-files.imgix.net/d8734355-803b-473d-837f-649176a5172e.png?auto=format",
+          link: "https://www.chatpdf.com",
+        },
+        {
+          title: "UIzard",
+          description: `are you tired of using complicated design software just to create a simple website or app? Say hello to Uizard, the user-friendly design tool that's perfect for non-designers! With Uizard, you can easily and quickly design mobile apps, web apps, websites, and desktop software. And get this - you don't need to be a design pro to use it!
+          <br /> <br />
+          Just sketch out your ideas on pen and paper and let Uizard do the rest. It's like magic! So why wait? Let's bring your website/ app product ideas to life with Uizard today!`,
+          image: "https://omonterm.sirv.com/Images/download.png",
+          link: "https://app.uizard.io",
+        },
+        {
+          title: "Postwise AI",
+          description: `Postwise - the AI-based Twitter management tool designed to take your social media game to the next level! With Postwise, you can easily enhance your presence on the platform and grow your following. Some of the key features and advantages include the AI Tweet Writer, which allows you to quickly craft engaging tweets tailored to your brand and message. Plus, the AI Twitter Thread Writer helps you create attention-grabbing threads that encourage followers to engage with your content. So why spend hours crafting tweets when Postwise can do it for you? Sign up today and let's take your Twitter presence to new heights!`,
+
+          image: "https://postwise.ai/img/logo.png",
+          link: "https://postwise.ai",
+        },
+        {
+          title: "Slides AI",
+          description: `Looking for a presentation tool that's out of this world? Say hello to SlidesAI - the AI-powered slide creation tool that will leave you speechless! With SlidesAI, you can finally say goodbye to the days of tedious, manual slide creation. It uses AI to write the outline and presentation content for you - all you need to do is sit back and watch as your ideas come to life on the screen. With SlidesAI, you can create professional, engaging slides in just seconds from any text, making it the perfect tool for busy professionals, students, and anyone looking to up their presentation game. So why wait? Install SlidesAI for Google Slides today and see for yourself just how incredible AI technology can be!`,
+          image: "https://omonterm.sirv.com/Images/section-1.avif",
+          link: "https://www.slidesai.io",
+        },
+        {
+          title: "Copy AI",
+          description: `Copy.ai is the writing tool you didn't know you needed. With features like optimized blog post writing, compelling ad copy creation, and engaging social media content, you can finally say goodbye to writer's block and hello to more conversions. Plus, with 90+ tools and templates available, content production has never been easier. Let the AI do the heavy lifting so you can focus on what really matters - your business.`,
+          image:
+            "https://omonterm.sirv.com/Images/6297c0cab1392750c5d86460_step-2.svg",
+          link: "https://copy.ai",
         },
       ],
       footer: {
