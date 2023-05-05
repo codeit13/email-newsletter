@@ -211,8 +211,10 @@
                   <option selected value="Cook all my meals - AI Chef">
                     Cook all my meals - AI Chef
                   </option>
-                  <option value="Run all my errands - AI personal assistant">
-                    Run all my errands - AI personal assistant
+                  <option
+                    value="Assist me in setting and achieving daily productivity goals"
+                  >
+                    Assist me in setting and achieving daily productivity goals
                   </option>
                   <option value="Others - please specify">
                     Others - please specify
@@ -312,39 +314,39 @@ export default {
       },
       products: [
         {
+          title: "The Dream Keeper",
+          description: `We forget 95% of our dreams the second we wake up, until now. A collaboration between dream scientists and AI engineers can now turn fleeting dreams into works of art. Just describe your dream, and it will turn it into an amazing art`,
+          image:
+            "https://omonterm.sirv.com/Images/The%20Dreamkeeper%20thumbnail%402x-100.jpg",
+          link: "https://thedreamkeeper.co/",
+        },
+        {
           title: "Chat PDF",
           description: `Introducing ChatPDF, the revolutionary way to communicate with any PDF document - and it's completely free and requires no sign-in! With ChatPDF, you can converse with books, research papers, manuals, legal contracts, and any other PDF you may have. It's a game-changing technology that's taking the world by storm, and with ChatGPT paving the way, the possibilities are endless!`,
           image:
-            "https://ph-files.imgix.net/d8734355-803b-473d-837f-649176a5172e.png?auto=format",
+            "https://omonterm.sirv.com/Images/Screenshot%20from%202023-05-05%2008-48-15.png",
           link: "https://www.chatpdf.com",
         },
         {
-          title: "UIzard",
-          description: `are you tired of using complicated design software just to create a simple website or app? Say hello to Uizard, the user-friendly design tool that's perfect for non-designers! With Uizard, you can easily and quickly design mobile apps, web apps, websites, and desktop software. And get this - you don't need to be a design pro to use it!
-          <br /> <br />
-          Just sketch out your ideas on pen and paper and let Uizard do the rest. It's like magic! So why wait? Let's bring your website/ app product ideas to life with Uizard today!`,
-          image: "https://omonterm.sirv.com/Images/download.png",
-          link: "https://app.uizard.io",
-        },
-        {
-          title: "Postwise AI",
-          description: `Postwise - the AI-based Twitter management tool designed to take your social media game to the next level! With Postwise, you can easily enhance your presence on the platform and grow your following. Some of the key features and advantages include the AI Tweet Writer, which allows you to quickly craft engaging tweets tailored to your brand and message. Plus, the AI Twitter Thread Writer helps you create attention-grabbing threads that encourage followers to engage with your content. So why spend hours crafting tweets when Postwise can do it for you? Sign up today and let's take your Twitter presence to new heights!`,
+          title: "Neural Frames",
+          description: `AI animation generation that puts no limitations to your imaginative power. Create stunning digital art ranging from abstract to hyper-realistic and any tone in between. <br /> <br /> Wanna make cool videos without all the fuss? Just throw in any picture, even one of yourself will work, and tell the AI what to do via text. Then sit back and watch as the magic happen!`,
 
-          image: "https://postwise.ai/img/logo.png",
-          link: "https://postwise.ai",
-        },
-        {
-          title: "Slides AI",
-          description: `Looking for a presentation tool that's out of this world? Say hello to SlidesAI - the AI-powered slide creation tool that will leave you speechless! With SlidesAI, you can finally say goodbye to the days of tedious, manual slide creation. It uses AI to write the outline and presentation content for you - all you need to do is sit back and watch as your ideas come to life on the screen. With SlidesAI, you can create professional, engaging slides in just seconds from any text, making it the perfect tool for busy professionals, students, and anyone looking to up their presentation game. So why wait? Install SlidesAI for Google Slides today and see for yourself just how incredible AI technology can be!`,
-          image: "https://omonterm.sirv.com/Images/section-1.avif",
-          link: "https://www.slidesai.io",
-        },
-        {
-          title: "Copy AI",
-          description: `Copy.ai is the writing tool you didn't know you needed. With features like optimized blog post writing, compelling ad copy creation, and engaging social media content, you can finally say goodbye to writer's block and hello to more conversions. Plus, with 90+ tools and templates available, content production has never been easier. Let the AI do the heavy lifting so you can focus on what really matters - your business.`,
           image:
-            "https://omonterm.sirv.com/Images/6297c0cab1392750c5d86460_step-2.svg",
-          link: "https://copy.ai",
+            "https://omonterm.sirv.com/Images/644574aedea1ba5bcce33fdb_neuralframes-logo.png",
+          link: "https://neuralframes.com",
+        },
+        {
+          title: "Flow GPT",
+          description: `FlowGPT features the best new prompts. It's a community for anyone to share and discover the best prompts to unleash the boundless possibilities of Artificial Intelligence.`,
+          image:
+            "https://omonterm.sirv.com/Images/Screenshot%20from%202023-05-05%2008-45-04.png",
+          link: "https://flowgpt.com",
+        },
+        {
+          title: "Codium",
+          description: `A Free AI-Powered Toolkit for Developers. An alternative to paid github copilot.  With this tool, you can get custom code suggestions that are based on your unique coding style and code structure. And the more you use it, the better it gets at understanding your individual needs and preferences. So why not give it a spin and see how it can boost your coding productivity? It didn't take long for me`,
+          image: "https://omonterm.sirv.com/Images/unnamed.jpg",
+          link: "https://codeium.com",
         },
       ],
       footer: {
